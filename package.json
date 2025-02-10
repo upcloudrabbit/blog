@@ -1,9 +1,9 @@
 {
-  "name": "lhc-s-blog",
+  "name": "upcloudrabbit blog",
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "author": "liuhaochu.lhc <liuhaochu.lhc@digital-engine.com>",
+  "author": "upcloudrabbit <1814876440@qq.com>",
   "license": "MIT",
   "engines": {
     "node": "^18.20.0 || >=20.0.0"
@@ -17,11 +17,13 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",
-    "vuepress": "2.0.0-rc.19",
-    "vuepress-theme-plume": "1.0.0-rc.130",
+    "artplayer": "^5.2.2",
     "http-server": "^14.1.1",
-    "vue": "^3.5.13",
     "sass-embedded": "^1.83.4",
-    "typescript": "^5.7.3"
+    "swiper": "^11.2.2",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.19",
+    "vuepress-theme-plume": "1.0.0-rc.130"
   }
 }

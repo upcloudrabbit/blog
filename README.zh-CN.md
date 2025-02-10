@@ -12,11 +12,11 @@ npm i
 
 ```sh
 # 启动开发服务
-npm run docs:dev
+npm run Other:dev
 # 构建生产包
-npm run docs:build
+npm run Other:build
 # 本地预览生产服务
-npm run docs:preview
+npm run Other:Other
 # 更新 vuepress 和主题
 npm run vp-update
 ```

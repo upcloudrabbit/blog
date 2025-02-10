@@ -1,3 +1,8 @@
+---
+title: test
+createTime: 2025/02/10 22:03:13
+permalink: /article/zpa70dxk/
+---
 # lhc-s-blog
 
 The Site is generated using [vuepress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
