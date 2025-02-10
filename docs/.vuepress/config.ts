@@ -3,7 +3,7 @@ import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export default defineUserConfig({
-  base: '/blog',
+  base: '/blog/',
   lang: 'zh-CN',
   title: 'upcloudrabbit blog',
   description: 'a private blog website',
@@ -37,16 +37,20 @@ export default defineUserConfig({
      */
     // blog: false, // 禁用博客
     blog: {
+      link: '/',
       postList: true, // 是否启用文章列表页
       tags: true, // 是否启用标签页
+      tagsLink: '/tags/',
       archives: true, // 是否启用归档页
+      archivesLink: '/archives/', // 是否启用归档页
       categories: true, // 是否启用分类页
+      categoriesLink: '/categories/', // 是否启用分类页
       postCover: 'right', // 文章封面位置
       pagination: 5, // 每页显示文章数量
     },
 
     /* 博客文章页面链接前缀 */
-    article: '/article/',
+    article: '/article',
 
     /**
      * 编译缓存，加快编译速度
