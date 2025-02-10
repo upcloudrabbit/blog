@@ -7,7 +7,7 @@ import { navbar } from './navbar'
 export default defineThemeConfig({
   logo: 'https://theme-plume.vuejs.press/plume.png',
 
-  appearance: true,  // 配置 深色模式
+  appearance: 'dark',  // 配置 深色模式
 
   social: [
     { icon: 'github', link: '/' },
