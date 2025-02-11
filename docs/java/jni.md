@@ -556,7 +556,7 @@ typedef struct _jmethodID *jmethodID;
 
 
 + void Set&lt;type>Field(JNIEnv *env, jobject obj, jfieldID fieldID,NativeType value); 改写某个实例指定字段的值，type 与 NativeType 的对应关系同上
-+ jmethodID GetMethodID(JNIEnv *env, jclass clazz,const char *name, const char *sig); 获取某个类的指定方法的 jmethodID，如果该类未初始化则此方法会触发该类完成初始化，获取的方法可以是该类从父类继承的方法。获取构造方法时，方法名必须是 <init>，返回类型必须是 void (V)
++ jmethodID GetMethodID(JNIEnv *env, jclass clazz,const char *name, const char *sig); 获取某个类的指定方法的 jmethodID，如果该类未初始化则此方法会触发该类完成初始化，获取的方法可以是该类从父类继承的方法。获取构造方法时，方法名必须是 &lt;init>，返回类型必须是 void (V)
 + NativeType Call&lt;type>Method(JNIEnv *env, jobject obj,jmethodID methodID, ...)
 + NativeType Call&lt;type>MethodA(JNIEnv *env, jobject obj,jmethodID methodID, const jvalue *args)
 + NativeType Call&lt;type>MethodV(JNIEnv *env, jobject obj,jmethodID methodID, va_list args); 上述三个都是调用指定实例对象的指定方法，不同的是方法入参的传递方法，同之前的 NewObject 系列方法。注意如果调用的方法是从父类继承的，无论是构造方法还是普通方法，使用的 jmethodID 都必须是从 obj 获取的，而不是从父类实例获取的。NativeType 和 type 是一一对应的，如下：
@@ -575,19 +575,19 @@ typedef struct _jmethodID *jmethodID;
 | CallDoubleMethod() CallDoubleMethodA() CalDoubleMethodV()  | jdouble |
 
 
-+ NativeType CallNonvirtual<type>Method(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, ...);
-+ NativeType CallNonvirtual<type>MethodA(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, const jvalue *args);
-+ NativeType CallNonvirtual<type>MethodV(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, va_list args); 同 Call&lt;type>Method 都是调用指定类实例的指定方法，jmethodID 必须是从类实例的 jclass 获取，CallNonvirtual<type>Method 多了一个参数 jclass，但是 jclass 不一定是 obj 的 jclass，也可以是 obj 的父类的 jclass，无论哪一个，jmethodID 都是从指定的 jclass clazz获取的，最终调用的方法实现取决于 jmethodID。简单的说如果子类继承并改写了父类的方法，Call&lt;type>Method 只能调用改写后的方法，而 CallNonvirtual<type>Method 即可以调用父类的原始方法，也可以调用子类的改写方法。这里的虚方法是 C++ 中的概念，C++ 中如果一个方法不是虚方法，子类继承并改写了该方法，则当子类实例向上强转成父类实例时调用的就是父类而非子类的改写方法。如果子类继承并改写的方法被定义成虚方法，则会通过虚函数表的方式保证当子类实例向上强转成父类实例时调用的依然是子类的改写方法，即所谓的多态。NativeType 和 type 的对应关系同 Call&lt;type>Method
++ NativeType CallNonvirtual&lt;type>Method(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, ...);
++ NativeType CallNonvirtual&lt;type>MethodA(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, const jvalue *args);
++ NativeType CallNonvirtual&lt;type>MethodV(JNIEnv *env, jobject obj,jclass clazz, jmethodID methodID, va_list args); 同 Call&lt;type>Method 都是调用指定类实例的指定方法，jmethodID 必须是从类实例的 jclass 获取，CallNonvirtual&lt;type>Method 多了一个参数 jclass，但是 jclass 不一定是 obj 的 jclass，也可以是 obj 的父类的 jclass，无论哪一个，jmethodID 都是从指定的 jclass clazz获取的，最终调用的方法实现取决于 jmethodID。简单的说如果子类继承并改写了父类的方法，Call&lt;type>Method 只能调用改写后的方法，而 CallNonvirtual&lt;type>Method 即可以调用父类的原始方法，也可以调用子类的改写方法。这里的虚方法是 C++ 中的概念，C++ 中如果一个方法不是虚方法，子类继承并改写了该方法，则当子类实例向上强转成父类实例时调用的就是父类而非子类的改写方法。如果子类继承并改写的方法被定义成虚方法，则会通过虚函数表的方式保证当子类实例向上强转成父类实例时调用的依然是子类的改写方法，即所谓的多态。NativeType 和 type 的对应关系同 Call&lt;type>Method
 
 注意上述方法和字段操作都是针对非静态的方法和字段的，对静态的方法和字段操作的 API 如下：
 
 + jfieldID GetStaticFieldID(JNIEnv *env, jclass clazz,const char *name, const char *sig); 获取指定静态方法的 ID，同上会触发未初始化类的初始化
-+ NativeType GetStatic<type>Field(JNIEnv *env, jclass clazz,jfieldID fieldID);读取指定静态字段的值， NativeType 和 type 的对应关系同 Get&lt;type>Field
-+ void SetStatic<type>Field(JNIEnv *env, jclass clazz,jfieldID fieldID, NativeType value); 改写指定静态字段的值，NativeType 和 type 的对应关系同 Set&lt;type>Field
++ NativeType GetStatic&lt;type>Field(JNIEnv *env, jclass clazz,jfieldID fieldID);读取指定静态字段的值， NativeType 和 type 的对应关系同 Get&lt;type>Field
++ void SetStatic&lt;type>Field(JNIEnv *env, jclass clazz,jfieldID fieldID, NativeType value); 改写指定静态字段的值，NativeType 和 type 的对应关系同 Set&lt;type>Field
 + jmethodID GetStaticMethodID(JNIEnv *env, jclass clazz,const char *name, const char *sig); 获取指定静态方法的 ID，会导致未初始化类的初始化
-+ NativeType CallStatic<type>Method(JNIEnv *env, jclass clazz,jmethodID methodID, ...);
-+ NativeType CallStatic<type>MethodA(JNIEnv *env, jclass clazz,jmethodID methodID, jvalue *args);
-+ NativeType CallStatic<type>MethodV(JNIEnv *env, jclass clazz,jmethodID methodID, va_list args); 上述三个方法都是调用指定静态方法
++ NativeType CallStatic&lt;type>Method(JNIEnv *env, jclass clazz,jmethodID methodID, ...);
++ NativeType CallStatic&lt;type>MethodA(JNIEnv *env, jclass clazz,jmethodID methodID, jvalue *args);
++ NativeType CallStatic&lt;type>MethodV(JNIEnv *env, jclass clazz,jmethodID methodID, va_list args); 上述三个方法都是调用指定静态方法
 
 注意在调用方法或者设置属性传参数时，需要密切关注参数类型，尤其是基本类型，只有字段或者方法声明明确使用了基本类型传参才能使用基本类型，否则必须通过 Integer 等包装类的构造方法将基本类型转换为对应包装类的对象；另一个需要注意的就是可变参数类型，Java 中可以传入数量可变的参数，这些参数最终会被编译器转换成一个数组，即这类参数类型实际是一个数组，因此传参时不能跟 Java 一样，而需要显示的传入一个数组类型。以下是一个 JNI 字段和方法测试，dll 生成参考上一节步骤。
 
@@ -1085,9 +1085,9 @@ char* convert_to_utf8(const jchar* base, u_char* result,int length) {
 
 注意上述 API 除 GetArrayLength 外都是针对对象数组，对 int 等基本类型的数组的 API 如下：
 
-+ ArrayType New<PrimitiveType>Array(JNIEnv *env, jsize length); 创建一个指定长度 length 的基本类型数组，ArrayType 与 PrimitiveType 的对应关系如下：
++ ArrayType New&lt;PrimitiveType>Array(JNIEnv *env, jsize length); 创建一个指定长度 length 的基本类型数组，ArrayType 与 PrimitiveType 的对应关系如下：
 
-| New<PrimitiveType>Array Routine | Array type |
+| New&lt;PrimitiveType>Array Routine | Array type |
 | --- | --- |
 | NewBooleanArray() | jbooleanArray |
 | NewByteArray() | jbyteArray |
@@ -1101,7 +1101,7 @@ char* convert_to_utf8(const jchar* base, u_char* result,int length) {
 
 + NativeType *Get&lt;PrimitiveType>ArrayElements(JNIEnv *env,ArrayType array, jboolean *isCopy); 获取基本类型数组的元素数组，isCopy 表示返回的元素数组是否复制自原数组，如果是复制自原数组则 isCopy 被设置成 1，否则设置成 false。返回的数组指针一直是有效的，直到调用了Release&lt;PrimitiveType>ArrayElements() 方法。对返回的数组元素的修改不会同步到原数组，除非调用了 Releas&lt;PrimitiveType>ArrayElements 方法。NativeType，PrimitiveType 和 ArrayType 三者的对应关系如下：
 
-| New<PrimitiveType>Array Routine | Array type | Native type |
+| New&lt;PrimitiveType>Array Routine | Array type | Native type |
 | --- | --- | --- |
 | GetBooleanArrayElements() | jbooleanArray | jboolean |
 | GetByteArrayElements() | jbyteArray | jbyte |
