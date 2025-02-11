@@ -12,11 +12,11 @@ npm i
 
 ```sh
 # start dev server
-npm run Other:dev
+npm run other:dev
 # build for production
-npm run Other:build
-# Other production build in local
-npm run Other:Other
+npm run other:build
+# other production build in local
+npm run other:other
 # update vuepress and theme
 npm run vp-update
 ```

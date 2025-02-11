@@ -1,5 +1,8 @@
 ---
-title: wait_notify
+title: wait / notify 交替输出 100 以内的数
+tags:
+  - java
+  - interview
 createTime: 2025/02/10 22:30:53
 permalink: /article/bdav8vie/
 ---
@@ -88,7 +91,7 @@ public class Test {
 
 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29305717/1715416018482-a7c590ee-a043-4089-ad3d-f39a01d6e979.png)
+![](../images/java/wait_notify/1.png)
 
 
 

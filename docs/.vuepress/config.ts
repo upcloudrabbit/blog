@@ -18,11 +18,11 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
-    hostname: 'https://upcloudrabbit.github.com/blog',
+    hostname: 'https://upcloudrabbit.github.io/blog/',
 
     /* 文档仓库配置，用于 editLink */
     // docsRepo: '',
-    // docsDir: 'Other',
+    // docsDir: 'other',
     // docsBranch: '',
 
     /* 页内信息 */
@@ -38,7 +38,7 @@ export default defineUserConfig({
     // blog: false, // 禁用博客
     blog: {
       link: '/',
-      postList: true, // 是否启用文章列表页
+      postList: false, // 是否启用文章列表页
       tags: true, // 是否启用标签页
       tagsLink: '/tags/',
       archives: true, // 是否启用归档页
