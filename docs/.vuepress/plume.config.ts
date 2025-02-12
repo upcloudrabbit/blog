@@ -5,12 +5,12 @@ import { navbar } from './navbar'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  logo: '/EditBlog.png',
 
   appearance: 'dark',  // 配置 深色模式
 
   social: [
-    { icon: 'github', link: '/' },
+    { icon: 'github', link: 'https://github.com/upcloudrabbit' },
   ],
   navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
   aside: true, // 页内侧边栏， 默认显示在右侧
@@ -28,7 +28,7 @@ export default defineThemeConfig({
 
   /* 站点页脚 */
   footer: {
-    message: 'Power by upcloudrabbiit',
+    message: 'Power by upcloudrabbit',
     copyright: '',
   },
 
@@ -36,7 +36,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: 'https://theme-plume.vuejs.press/plume.png',
+    avatar: '/avatar.png',
     name: 'upcloudrabbit blog',
     description: 'some descriptions',
     // circle: true,

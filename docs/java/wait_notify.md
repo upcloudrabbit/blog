@@ -1,5 +1,5 @@
 ---
-title: wait / notify 交替输出 100 以内的数
+title: wait/notify交替输出100以内的数
 tags:
   - java
   - interview
