@@ -210,7 +210,7 @@ read_buffer = 4M
 write_buffer = 4M
 ```
 
-5. 添加 mysql 用户和用户组用于启动 mysql `<font style="color:rgb(0, 0, 0);background-color:rgb(241, 241, 241);">groupadd mysql && </font><font style="color:rgb(0, 0, 0) !important;">useradd </font><font style="color:rgb(0, 0, 255) !important;">-</font><font style="color:rgb(0, 0, 0) !important;">r </font><font style="color:rgb(0, 0, 255) !important;">-</font><font style="color:rgb(0, 0, 0) !important;">g mysql mysql</font>`<font style="color:rgb(0, 0, 0);background-color:rgb(241, 241, 241);">设置 mysql 为非登录用户 </font>`<font style="color:rgb(0, 0, 0) !important;">usermod </font><font style="color:rgb(0, 0, 255) !important;">-</font><font style="color:rgb(0, 0, 0) !important;">s </font><font style="color:rgb(0, 0, 255) !important;">/</font><font style="color:rgb(0, 0, 0) !important;">sbin</font><font style="color:rgb(0, 0, 255) !important;">/</font><font style="color:rgb(0, 0, 0) !important;">nologin mysql</font>`<font style="color:rgb(0, 0, 0) !important;">（可选，设置后无法 su mysql）</font>
+5. 添加 mysql 用户和用户组用于启动 mysql groupadd mysql && useradd -r -g mysql mysql 设置 mysql 为非登录用户 usermod -s sbin/nologin mysql（可选，设置后无法 su mysql）
 6. 执行数据库初始化命令 （尾行会输出数据库的初始化密码）
 
 ```bash
@@ -482,7 +482,7 @@ RESET_FLAG=$(cat $RESET_FLAG_FILE)
 if [ -z "$RESET_FLAG" ] && [ "$COUNTER" -ne 2 ]; then
     task_name="MySQL 从节点同步任务失败，IP 172.22.80.65"
     url="http://172.26.30.201:8080/smsParserService/downsms"
-    phones=("15620551053" "15652410029")
+    phones=("xxxxxxxxxxx" "xxxxxxxxxxx")
 
     for phone in "${phones[@]}"
     do
