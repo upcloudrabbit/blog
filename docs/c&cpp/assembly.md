@@ -2,7 +2,6 @@
 title: assembly
 tags:
   - assembly
-  - c&cpp
 createTime: 2025/02/28 19:25:24
 permalink: /article/tr4ayjno/
 ---

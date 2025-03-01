@@ -1,7 +1,7 @@
 ---
 title: rust
 tags:
-  - install
+  - config
   - rust
 createTime: 2025/02/27 19:47:10
 permalink: /article/82tk7paa/
