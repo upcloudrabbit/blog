@@ -5,6 +5,8 @@ tags:
   - database
 createTime: 2025/02/25 21:39:12
 permalink: /article/y8calcxq/
+categories:
+  - db
 ---
 # 大 key 统计与删除
 redis 中的大 key 使用 keys * 获取时会阻塞整个 redis 应用，不推荐使用。如果要获取 redis 中的 key 以下提供两种方案

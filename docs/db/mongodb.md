@@ -5,6 +5,8 @@ tags:
   - database
 createTime: 2025/02/25 21:38:22
 permalink: /article/tm7k59or/
+categories:
+  - db
 ---
 [官方文档](https://www.mongodb.com/docs/manual/)
 

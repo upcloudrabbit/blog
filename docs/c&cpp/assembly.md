@@ -4,6 +4,8 @@ tags:
   - assembly
 createTime: 2025/02/28 19:25:24
 permalink: /article/tr4ayjno/
+categories:
+  - c&cpp
 ---
 # visual studio 2022 编写汇编设置
 + 创建一个空 windows 程序空项目

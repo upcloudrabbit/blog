@@ -5,6 +5,8 @@ tags:
   - os
 createTime: 2025/03/09 19:15:14
 permalink: /article/lmenjhvq/
+categories:
+  - os
 ---
 # Debian 修改 IP 开放 Root 远程登录
 修改 IP：

@@ -5,6 +5,8 @@ tags:
   - springboot
 createTime: 2025/02/12 21:05:40
 permalink: /article/i51fy95l/
+categories:
+  - java
 ---
 # SpringBoot 自动装配
 ## 自动装配

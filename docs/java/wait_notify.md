@@ -5,6 +5,8 @@ tags:
   - interview
 createTime: 2025/02/10 22:30:53
 permalink: /article/bdav8vie/
+categories:
+  - java
 ---
 # wait / notify 交替输出 100 以内的数
 实现如下：

@@ -5,6 +5,8 @@ tags:
   - c&cpp
 createTime: 2025/02/26 22:54:10
 permalink: /article/j3k55ocb/
+categories:
+  - c&cpp
 ---
 # 宏描述
 C 语言中的宏（macro）是一种预处理指令，可以在编译前将代码中的符号替换为指定的文本。宏可以简化代码并提高可读性，也可以用来实现一些高级的功能。

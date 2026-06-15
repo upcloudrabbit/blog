@@ -38,7 +38,7 @@ export default defineThemeConfig({
   profile: {
     avatar: '/avatar.png',
     name: 'upcloudrabbit blog',
-    description: 'some descriptions',
+    description: '路漫漫其修远兮，吾将上下而求索',
     // circle: true,
     // location: '',
     // organization: '',
@@ -46,6 +46,34 @@ export default defineThemeConfig({
 
   navbar,
 
+  /**
+   * 博客文章集合
+   * @see https://theme-plume.vuejs.press/config/basic/#collections
+   */
+  collections: [
+    {
+      type: 'post',
+      title: 'Blog',
+      dir: '',
+      link: '/',
+      linkPrefix: '/article/',
+      postList: false, // 是否启用文章列表页
+      tags: true, // 是否启用标签页
+      tagsLink: '/tags/',
+      archives: true, // 是否启用归档页
+      archivesLink: '/archives/',
+      categories: true, // 是否启用分类页
+      categoriesLink: '/categories/',
+      postCover: 'right', // 文章封面位置
+      pagination: { perPage: 5 }, // 每页显示文章数量
+      exclude: ['.vuepress/**/*', 'README.md'],
+      autoFrontmatter: {
+        permalink: true,
+        createTime: true,
+        title: true,
+      },
+    },
+  ],
 
   /**
    * 公告板
@@ -64,5 +92,4 @@ export default defineThemeConfig({
     postList: true,    // 启用 博客文章列表过渡动画
     appearance: 'fade',  // 启用 深色模式切换过渡动画, 或配置过渡动画类型
   },
-
 })

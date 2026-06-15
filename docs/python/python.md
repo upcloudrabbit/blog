@@ -4,6 +4,8 @@ tags:
   - python
 createTime: 2025/02/25 21:40:55
 permalink: /article/dx27iyu0/
+categories:
+  - python
 ---
 # Python 正则替换
 正则替换可以使用内置的  re 包进行，主要用到其中的两个方法：

@@ -6,6 +6,8 @@ tags:
   - jvm
 createTime: 2025/02/18 19:56:50
 permalink: /article/t04w874u/
+categories:
+  - java
 ---
 以下是一些 jdk 下载地址：
 

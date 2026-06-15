@@ -5,6 +5,8 @@ tags:
   - os
 createTime: 2025/03/04 19:39:05
 permalink: /article/svrjlg68/
+categories:
+  - os
 ---
 # ubuntu24.04-live-server 安装
 1. 子网划分时只能选用 CDIR 进行，因此大部分划分格式为 `192.168.x.0/24`

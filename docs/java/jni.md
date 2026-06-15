@@ -5,6 +5,8 @@ tags:
   - jvm
 createTime: 2025/02/11 22:05:58
 permalink: /article/qf0239zm/
+categories:
+  - java
 ---
 JNI（Java Native Interface）通过 Java 方法调用使用本地代码如 C/C++ 实现的方法
 

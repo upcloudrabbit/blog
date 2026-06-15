@@ -5,6 +5,8 @@ tags:
   - csharp
 createTime: 2025/03/01 14:06:44
 permalink: /article/0rz7rt7c/
+categories:
+  - c&cpp
 ---
 ## Visual Studio Code 的 CodeRunner 插件配置 csc 编译执行单个 cs 文件
 CodeRunner 运行 C# 文件时默认使用 scripts ，这个插件不太好安装，建议使用 win 自带的 csc 直接编译执行

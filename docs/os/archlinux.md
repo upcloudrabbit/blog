@@ -5,6 +5,8 @@ tags:
   - os
 createTime: 2025/03/05 20:58:56
 permalink: /article/j5gvwu44/
+categories:
+  - os
 ---
 # ArchLinux 安装
 archlinux 需要网络才能安装

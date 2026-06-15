@@ -5,6 +5,8 @@ tags:
   - database
 createTime: 2025/02/24 23:33:23
 permalink: /article/lzprr0pb/
+categories:
+  - db
 ---
 # MySQL8 主从、主主集群搭建
 这里用两台机器作为演示，ip 分别为 192.168.6.100/192.168.6.101，如果是主从那么只做一台的配置即可，主主就是相当于做两次主从，即：192.168.6.100（master） <- 192.168.6.101（slave） 192.168.6.100（slave） -> 192.168.6.101（master）

@@ -5,6 +5,8 @@ tags:
   - maven
 createTime: 2025/02/17 23:04:27
 permalink: /article/7uzmq0e4/
+categories:
+  - java
 ---
 # maven 打包排除父类依赖的插件
 有些奇葩的项目喜欢在父 pom 定义一些奇怪的插件导致其他人不能打包（这个父 pom 被打包成私有 jar 当作三方依赖引入），解决方案

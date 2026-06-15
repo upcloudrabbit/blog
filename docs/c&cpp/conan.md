@@ -5,6 +5,8 @@ tags:
   - c&cpp
 createTime: 2025/02/26 22:52:39
 permalink: /article/nekyd12y/
+categories:
+  - c&cpp
 ---
 [conan](https://conan.io/) 作为一个开源、去中心化和多平台的软件包管理器，用于创建和共享所有本地二进制文件.
 

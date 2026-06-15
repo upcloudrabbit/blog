@@ -5,6 +5,8 @@ tags:
   - database
 createTime: 2025/02/25 21:38:52
 permalink: /article/zp7j01bf/
+categories:
+  - db
 ---
 # Oracle 在当前行获取上 n 行下 n 行数据
 lead(field, num, defaultvalue) field 需要查找的字段，num 往后查找的 num 行的数据，defaultvalue 没有符合条件的默认值。

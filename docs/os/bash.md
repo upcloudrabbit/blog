@@ -5,6 +5,8 @@ tags:
   - os
 createTime: 2025/03/03 21:33:39
 permalink: /article/yauuumex/
+categories:
+  - os
 ---
 # 统计接口日志平均耗时
 ```bash

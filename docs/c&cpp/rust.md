@@ -5,6 +5,8 @@ tags:
   - rust
 createTime: 2025/02/27 19:47:10
 permalink: /article/82tk7paa/
+categories:
+  - c&cpp
 ---
 # Windows 安装 rust
 下载 [rust-init](https://www.rust-lang.org/zh-CN/tools/install)

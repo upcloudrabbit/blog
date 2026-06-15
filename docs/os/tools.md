@@ -5,6 +5,8 @@ tags:
   - os
 createTime: 2025/03/02 20:11:47
 permalink: /article/indhndk3/
+categories:
+  - os
 ---
 # update-alternatives
 用于在 linux 下管理软件版本，其原理如下：

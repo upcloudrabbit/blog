@@ -4,6 +4,8 @@ tags:
   - git
 createTime: 2025/02/13 22:08:26
 permalink: /article/ef521mr9/
+categories:
+  - other
 ---
 # Git 创建密钥以及配置代理
 键入以下命令，连敲三次回车生成公钥，默认生成路径（第一次敲回车前就是设置路径） C:\Users\Haochuliu\.ssh
