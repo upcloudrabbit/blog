@@ -107,6 +107,16 @@ export default defineUserConfig({
     watermark: true,
 
     /**
+     * 页面加密，匹配 work 目录下所有文档
+     * @see https://theme-plume.vuejs.press/config/encrypt/
+     */
+    encrypt: {
+      rules: {
+        '/work/': '1415450231',
+      },
+    },
+
+    /**
      * 编译缓存，加快编译速度
      * @see https://theme-plume.vuejs.press/config/basic/#cache
      */
